@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<p>Hello</p>
+
+<p id="demo">Jquery</p>
+
+<p class="cls">world</p>
+
+<h3 class="cls">Hello Jquery</h3>
+
+<input type="text" id="name">
+
+<button type="button" id="btn">버튼</button>
+
+<!-- <p style="background-color: #ffff00"></p> -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// let pArr = document.getElementsByTagName("p");
+	
+	$("p").click(function() {
+		// alert('p click');
+	
+		// getter
+	//	let str = $(this).html();
+	//	alert( str );
+	
+		// setter
+	//	$(this).text("하이");	
+	});
+	
+	$("#demo").on("click", function () {
+		// $("#demo").css("background", "#ffff00");
+		// setter    property      value  
+		$("h3").css("background", "#ffff00");
+		
+		// getter
+		let color = $("h3").css("background");
+		alert(color);
+	});
+	
+	$(".cls").click(function() {
+		alert( $(this).text() );		
+	});
+	
+	$("#btn").click(function () {
+		
+	//	let name = $("#name").val();		
+	//	$("h3.cls").text( name );
+	
+		let text = $("h3.cls").text();
+		$("#name").val( text );	
+	});
+	
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- radio -->
+<ul>
+	<li><input type="radio" name="radioTest" value="사과" checked="checked">사과</li>
+	<li><input type="radio" name="radioTest" value="배">배</li>
+	<li><input type="radio" name="radioTest" value="바나나">바나나</li>
+</ul>
+
+<button type="button" id="btn">선택</button>
+
+<script type="text/javascript">
+$(document).ready(function() {	
+	$("#btn").click(function() {
+		
+		// getter
+		// let radioVal = $("input[name='radioTest']:checked").val();
+		// alert(radioVal);
+		
+		// setter
+		$("input[name='radioTest']").val(["바나나"]);
+	});	
+	
+});
+</script>
+
+<br><br>
+
+<!-- checkbox -->
+<input type="checkbox" id="ch1" name="ch">그림그리기
+<input type="checkbox" id="ch2" name="ch">음악듣기
+<br>
+<button type="button" id="cbtn">첵크</button>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#cbtn").click(function() {
+		// getter
+	//	let check = $("#ch1").is(":checked");
+	//	alert(check);
+	
+	//	let check = $("input:checkbox[id='ch2']").is(":checked");
+	//	alert(check);
+	
+		// setter
+	//	$("#ch1").attr("checked", "checked");
+		$("#ch1").prop("checked", true);	
+		
+	});
+	
+});
+</script>
+
+<br><br>
+
+<select id="food">
+	<option value="햄버거">햄버거</option>
+	<option value="피자" selected="selected">피자</option>
+	<option value="치킨">치킨</option>			
+</select>
+
+<p id="demo">p demo</p>
+
+<button type="button" id="sbtn">선택</button>
+<button type="button" id="append">추가(뒤)</button>
+<button type="button" id="prepend">추가(앞)</button>
+
+<script type="text/javascript">
+
+$("#food").change(function() {
+	let val = $(this).val();
+	$("#demo").html(val);
+});
+
+$("#sbtn").click(function() {
+	// alert( $("#food").val() );
+	
+	// $("#food").empty();
+});
+
+$("#append").click(function() {
+	//$("#demo").append("<h3>h3 태그 (뒤)추가</h3>");
+	$("#food").append("<option value='스테이크'>스테이크</option>");
+});
+
+$("#prepend").click(function() {
+	//$("#demo").prepend("<h3>h3 태그 (앞)추가</h3>");
+	$("#food").prepend("<option value='떡볶이'>떡볶이</option>");
+});
+
+</script>
+
+<br><br>
+
+<table border="1" id="table">
+<col width="50"><col width="150"><col width="100">
+<tr>
+	<th>번호</th><th>제목</th><th>작성자</th>
+</tr>
+
+<!-- 
+<tr>
+	<th>1</th><td>오늘은 금요일입니다</td><td>Tom</td>
+</tr>
+ -->
+ 
+</table>
+
+<script type="text/javascript">
+
+$("#table").append(
+			$("<tr>").append( 
+					$("<th>").append(1), 
+					$("<td>").append("오늘은 금요일입니다"),
+					$("<td>").append("Tom")
+			) 
+);
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+

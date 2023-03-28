@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>사진들</h1>
+
+<img alt="성 자비에르 성당(외관)" src="./images/img01.jpg" picname="성 자비에르 성당(외관)">
+<img alt="성 자비에르 성당(내관)" src="./images/img02.jpg" picname="성 자비에르 성당(내관)">
+<img alt="낡은 건물" src="./images/img03.jpg" picname="낡은 건물">
+<img alt="가로등" src="./images/img04.jpg" picname="가로등">
+
+<script type="text/javascript">
+$(function () {
+		
+	$("img").click(function() {
+		
+		let imagename = $(this).attr("picname");		
+		alert(imagename);
+	});
+	
+});
+</script>
+
+
+</body>
+</html>
+
+
+

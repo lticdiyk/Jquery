@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+<p id="demo">please click</p>
+
+<button type="button" id="btn">button</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+});
+
+$(function() {
+	// alert('func() 호출');
+	/*
+	$("button").click(function() { 
+		alert('button click'); 
+	});
+	
+	$("#btn").click(function () {
+		alert('button click'); 
+	});
+	
+	$("#demo").click(function () {
+		alert('p tag click'); 
+	});
+	*/
+	
+	/*
+	$("button").on("click", function () {
+		alert('button on click'); 
+	});
+	*/
+	
+	$("button").on("click", btnFunc);
+	
+		
+});
+
+function btnFunc() {
+	alert('button on click'); 
+}
+
+</script>
+
+</body>
+</html>
+
+
+

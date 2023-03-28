@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ -->
+
+<!-- 
+<script src="./jquery.min.js"></script> 
+ --> 
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+</head>
+<body>
+
+<!-- 
+		Jquery : Java Script 경량화, 간략화
+
+				DOM(Document Object Model)		
+				getElementById
+				getElementsByTagName
+				
+				Ajax
+				
+		Jquery-UI : Button, input(text), slide...		
+		
+		document.getElementById().innerText
+											onclick="func()"
+		$( 태그 또는 id 또는 class 또는 name ).핸들러함수(매개변수)
+		
+		document.getElementById().innerText = "hello";  // setter		
+		let str = document.getElementById().innerText;	// getter
+						
+ -->
+
+<p>정부, '초강력 대응' 北 반발에 "긴장 고조시키는 것은 북한"</p>
+
+<p id="demo">외교부 "국민 안전위한 단호한 대응은 정부 책무"…통일부 "대화의 길 동참 촉구"</p>
+
+<p class="cls">핵 미사일 도발·위협 등 한반도 긴장을 고조시키고 있는 것은 북한</p>
+
+<h3 class="cls">북한이 핵 미사일 능력을 고도화</h3> 
+
+
+<script type="text/javascript">
+/*
+let arrPtag = document.getElementsByTagName("p");
+for(i = 0;i < arrPtag.length; i++){
+	arrPtag[i].innerHTML = "<b>js 새로운 문자열</b>"; 
+}
+*/
+$(document).ready(function() {
+	// alert('$(document).ready');
+	
+	// setter
+//	$("p").html("새로운 문자열");	// == innerHTML	
+//	$("p").html("<b>새로운 문자열</b>");
+	
+//	$("p").text("new string");	// == innerText
+//	$("p").text("<b>new string</b>");
+
+//	$("#demo").text("Hello World");
+
+	// getter
+//	let txt = $("#demo").text();
+//	alert(txt);
+
+	$(".cls").html("<i>I can do it</i>");
+	
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+

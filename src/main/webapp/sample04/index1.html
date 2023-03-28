@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="demo">
+</div>
+
+<button type="button">버튼</button>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("button").click(function() {
+		
+		// 문자열로 추가
+	//	let str = "<p id='pid'>p 태그를 추가합니다</p>";
+	//	$('#demo').append(str);
+		
+		// Java Script 추가
+	/*	let jsStr = document.createElement("h3");
+		jsStr.setAttribute("id", "h3id");
+		jsStr.innerHTML = "h3 태그를 추가합니다";
+		$("#demo").append(jsStr);
+	*/	
+		// Jquery 추가
+		let jqStr = $("<span></span>").text("span 태그를 추가합니다");
+		jqStr.attr("id", "spanid");
+		$("#demo").append(jqStr);
+		
+	});
+	
+});
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>Hello Jquery</p>
+
+<p id="id">Hello Jquery</p>
+
+<p class="cls">Hello Jquery</p>
+
+<p name="name">Hello Jquery</p>
+
+<button type="button">button</button>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("button").click(function() {
+		
+		// $('p').hide();
+		// $('*').hide();
+		// $("p#id").hide();
+		// $("p.cls").hide();
+		$("p[name=name]").hide();
+		
+	});
+	
+});
+</script>
+
+
+</body>
+</html>
+
+
+

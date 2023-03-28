@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+<body>
+
+<input type="text" id="date" placeholder="선택일">
+<br><br>
+
+연도:<span id="year"></span><br>
+월:<span id="month"></span><br>
+일:<span id="day"></span>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	let week = ["일","월","화","수","목","금","토"];
+	
+	$("#date").datepicker({
+		dateFormat: "yy/mm/dd",
+		dayNamesMin: week,
+		monthNames: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],
+		onSelect: function( d ){
+			// alert(d);
+			
+			let date = d.split('/');
+			
+			$("#year").html(date[0]);
+			$("#month").html(date[1]);
+			$("#day").html(date[2]);	
+			
+			if(d == "2023/02/11" || d == "2023/02/12"){
+				alert('정상적으로 입력!');
+			}else{
+				alert('다시 입력!');
+			}
+			
+		}		
+	});
+	
+	
+	
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

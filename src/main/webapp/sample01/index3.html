@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>국민 안전위한 단호한 대응은 정부 책무</p>
+
+<div>
+	<p>정부, '초강력 대응' 北 반발에 "긴장 고조시키는 것은 북한"</p>
+	
+	<p id="demo">외교부 "국민 안전위한 단호한 대응은 정부 책무"…통일부 "대화의 길 동참 촉구"</p>
+	
+	<p class="cls">핵 미사일 도발·위협 등 한반도 긴장을 고조시키고 있는 것은 북한</p>
+	<h3 class="cls">북한이 핵 미사일 능력을 고도화</h3> 
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	/*
+	$("p").click(function() {
+		alert('p tag click');
+	});
+	*/
+	
+	/*
+	$("div p").click(function() {
+		alert('p tag click');
+	});
+	*/
+	
+	/*
+	$("div .cls").click(function() {
+		alert('p tag click');
+	});
+	*/
+	
+	/*
+	$("div p.cls").click(function() {
+		alert('p tag click');
+	});
+	*/
+	
+	$("p").click(function () {
+		
+		// $("#demo").css("background", "#ff0000");
+		
+		// $(this).css("background", "#ff0000");
+		
+		$(this).hide();
+	});
+	
+	// h3 태그를 클릭하면, p태그가 전부 보이도록 구현하라.
+	$("h3").click(function() {
+		
+		$("p").show();
+	});
+	
+});
+</script>
+
+</body>
+</html>
+
+
+
+

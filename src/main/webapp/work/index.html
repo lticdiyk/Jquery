@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Photo Library</h1>
+
+<p>기본 라인처리 color:green</p>
+<img alt="이미지없음" src="./images/p01.jpg" class="pic">
+<br>
+
+<script type="text/javascript">
+$(document).ready(function() {		// rendering 후에 실행
+	
+//	$(".pic").css("border", "solid 3px #00ff00");
+
+//	$(".pic").css({ "border":"solid 5px", 
+//					"border-color":"#ff0000" });
+
+	$(".pic").css("border", "solid 3px");
+	$(".pic").css("border-color", "#00ff00");
+});
+</script>
+
+<h1>Life in the water</h1>
+<p>이미지 클릭시 라인처리 color:red</p>
+
+<img alt="" src="./images/photo1.jpg" class="photo">
+<img alt="" src="./images/photo2.jpg" class="photo">
+<br>
+
+<script type="text/javascript">
+$(function () {
+	
+	$(".photo").click(function() {
+		$(this).css("border", "solid 5px #ff0000");
+	});
+});
+</script>
+
+<h1>Romm Image</h1>
+<p>마우스 커서가 이미지위로 이동하면, 이미지를 변경</p>
+
+<img alt="" src="./images/b_pic2.jpg" id="bpic">
+
+<script type="text/javascript">
+$(function () {
+	/*
+	$("#bpic").mouseover(function() {
+		$(this).attr("src", "./images/b_pic1.jpg");
+	});
+	$("#bpic").mouseout(function() {
+		$(this).attr("src", "./images/b_pic2.jpg");
+	});
+	*/
+	
+	$("#bpic").hover(
+		function() {   // mouseover
+			$(this).attr("src", "./images/b_pic1.jpg");
+		}, 
+		function() {	// mouseout
+			$(this).attr("src", "./images/b_pic2.jpg");
+		}
+	)
+	
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

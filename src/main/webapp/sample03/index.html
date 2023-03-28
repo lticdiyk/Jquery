@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- (입력데이터)전송 
+
+	<a href=""
+	
+	<form action=""
+	
+	location.href=""
+
+-->
+<a href="NewFile.jsp">NewFile로 이동</a>
+<br><br>
+
+이름:<input type="text" id="name"><br>
+나이:<input type="text" id="age"><br>
+주소:<input type="text" id="address"><br>
+<button type="button" id="send">버튼</button>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('#send').click(function() {		
+		
+		// let name = document.getElementById('name').value;
+		let name = $("#name").val();
+		let age = $("#age").val();
+		let address = $("#address").val();
+		
+		location.href = "NewFile.jsp?name=" + name + "&age=" + age + "&address=" + address;		
+	});	
+});
+</script>
+
+<br><br><br>
+
+<form id="frm">
+	이름:<input type="text" name="name"><br>
+	나이:<input type="text" name="age"><br>
+	주소:<input type="text" name="address"><br>
+	
+	<!-- <input type="submit"> -->
+	<button type="button" id="btn">전송</button>
+</form>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#btn").click(function() {
+		// 검사
+		
+		$("#frm").attr("action", "NewFile.jsp").submit();
+		
+	});
+	
+});
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

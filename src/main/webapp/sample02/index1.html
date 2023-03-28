@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h3>detail view</h3>
+<textarea rows="2" cols="20">기본글...</textarea>
+<br><br>
+
+<button type="button" id="answerBtn">답글입력</button>
+<br>
+
+ 
+<div id="answerFrom">
+	<!-- 입력창, 등록버튼 -->
+</div>
+
+<!--  
+<div id="answerFrom">
+	<br>
+	답글:<input type='text' id='answerText'>
+	<br><br>
+	<button type='button' id='answer'>답글등록</button>
+</div> 
+ -->
+ 
+<p id="demo"></p>
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+	
+//	$("#answerFrom").hide();
+	
+	$("#answerBtn").click(function() {
+		
+		let input = "<br>답글:<input type='text' id='answerText'>";
+		$("#answerFrom").append(input);
+		
+		let btn = "<br><br><button type='button' id='answer'>답글등록</button>";
+		$("#answerFrom").append(btn);
+				
+		// $("#answerFrom").show();		
+	});
+	
+	$(document).on("click", "#answer", function () {
+		let txt = $("#answerText").val();		
+		$("#demo").text( txt );
+	});
+	
+	
+	/*
+	$("#answer").click(function () {
+		let txt = $("#answerText").val();		
+		$("#demo").text( txt );
+	});
+	*/
+	
+});
+</script>
+
+
+</body>
+</html>
+
+
+
